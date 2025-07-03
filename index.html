@@ -1,85 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>BioShuar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>BioShuar - Cultura Amazónica Vivencial</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (solo una vez, limpio) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logoBioCircle.png" type="image/png" />
 </head>
+
 <body>
-    <div class="container">
-        <div id="particles-js"></div>
-        <div class="center">
-            <div class="loader"></div>
-            <div class="profile">
-                <div class="profile-image">
-                    <div class="image-ring">
-                        <img src="images/logoBio.jpg" alt="Tu imagen de perfil" id="profile-pic">
-                    </div>
-                </div>
-                <div class="profile-description">
-                    <br>
-                    <h1>Bio Shuar</h1>
-                    <br>
-                    <p>¡Bienvenido a BioShuar! 🚀 
-                        <br><br>
-                        Somos un Centro de Conocimiento Cultural y Turístico Shuar, que ofrece paquetes de turismo 
-                        vivencial: Senderismo, Camping, Veladas, Campamentos, Festivales y Ceremonias. 
-                    </p>
-                </div>
-            </div>
-            <div class="packages">
-                <div class="package" id="package1">
-                    <h2>Cultural Mayai</h2>
-                    <button class="view-more-btn" onclick="toggleDetails('package1-details')">Ver más</button>
-                    <div class="package-details" id="package1-details">
-                        <p>Tiempo: 3 horas</p>
-                        <p>Valor: 10$</p>
-                        <p>Este paquete incluye una experiencia cultural profunda, con actividades tradicionales y más.</p>
-                    </div>
-                </div>
-                <div class="package" id="package2">
-                    <h2>Espiritual Tarimiat</h2>
-                    <button class="view-more-btn" onclick="toggleDetails('package2-details')">Ver más</button>
-                    <div class="package-details" id="package2-details">
-                        <p>Tiempo: 3 horas</p>
-                        <p>Valor: 15$</p>
-                        <p>Este paquete ofrece una experiencia espiritual única con rituales tradicionales y más.</p>
-                    </div>
-                </div>
-                <div class="download-packages">
-                    <a href="BioShuar Gza.pdf" download="BioShuar Gza.pdf">Descargar Paquetes</a>
-                </div>
-            </div>
-            <div class="social-links">
-                <a class="social-link instagram social-link-border" href="https://www.instagram.com/kaar_joseph/" target="_blank">
-                    <img src="images/ig.png" alt="Instagram">
-                    Instagram
-                </a>
-                <a class="social-link facebook social-link-border" href="https://www.facebook.com/KaarUnkuchSaant" target="_blank">
-                    <img src="images/fb.png" alt="Facebook">
-                    Facebook
-                </a>
-                <a class="social-link whatsapp social-link-border" href="https://api.whatsapp.com/send?phone=593990323510" target="_blank">
-                    <img src="images/wh.png" alt="WhatsApp">
-                    WhatsApp
-                </a>
-                <a class="social-link twitter social-link-border" href="https://twitter.com/kaar_joseph" target="_blank">
-                    <img src="images/x.png" alt="Twitter">
-                    Twitter
-                </a>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="images/logoBioV2.png" alt="Logo Bio Shuar" class="hero-logo" />
+            <h1 class="hero-title">BIOSHUAR</h1>
+            <p class="hero-subtitle">CULTURA AMAZÓNICA VIVENCIAL</p>
+            <p class="hero-description">
+                Descubre la riqueza ancestral de la cultura Shuar en el corazón de la Amazonía ecuatoriana. 
+                Sumérgete en tradiciones milenarias, danzas sagradas y la sabiduría de los pueblos originarios.
+            </p>
+            <div class="cta-buttons">
+                <a href="#cultura" class="cta-button">Explorar Cultura</a>
+                <a href="#tiktok" class="cta-button secondary">Ver Videos</a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section class="section culture-section" id="cultura">
+        <div class="section-content">
+            <h2 class="section-title">Cultura Ancestral</h2>
+            <p class="section-subtitle">Conecta con las tradiciones milenarias del pueblo Shuar</p>
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <span class="culture-icon">🌿</span>
+                    <h3>Medicina Ancestral</h3>
+                    <p>Conoce las plantas sagradas y remedios tradicionales que han sanado por generaciones.</p>
+                </div>
+                <div class="culture-card">
+                    <span class="culture-icon">🎭</span>
+                    <h3>Danzas Rituales</h3>
+                    <p>Participa en ceremonias sagradas y aprende el significado de cada movimiento.</p>
+                </div>
+                <div class="culture-card">
+                    <span class="culture-icon">🏹</span>
+                    <h3>Artesanías</h3>
+                    <p>Descubre el arte de crear objetos ceremoniales y herramientas tradicionales.</p>
+                </div>
+                <div class="culture-card">
+                    <span class="culture-icon">🍃</span>
+                    <h3>Gastronomía</h3>
+                    <p>Saborea los sabores auténticos de la selva amazónica en cada plato.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok Section -->
+    <section class="section tiktok-section" id="tiktok">
+        <div class="section-content">
+            <h2 class="section-title">Contenido Viral</h2>
+            <p class="section-subtitle">Síguenos en TikTok para contenido cultural auténtico</p>
+            <div class="tiktok-grid">
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.shuar/video/7479198290135878918" data-video-id="7479198290135878918" style="max-width: 325px; min-width: 220px;">
+                        <section> </section>
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.shuar/video/7520766690188119352" data-video-id="7520766690188119352" style="max-width: 325px; min-width: 220px;">
+                        <section> </section>
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.shuar/video/7506670156081401094" data-video-id="7506670156081401094" style="max-width: 325px; min-width: 220px;">
+                        <section> </section>
+                    </blockquote>
+                </div>
+
+                <div class="tiktok-card">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bio.shuar/video/7389675899978845446" data-video-id="7389675899978845446" style="max-width: 325px; min-width: 220px;">
+                        <section> </section>
+                    </blockquote>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section location-section" id="ubicacion">
+        <div class="section-content">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <div class="location-content">
+                <div class="location-info">
+                    <h3>🌎 Chumpias, Gualaquiza</h3>
+                    <p>Ubicados en el corazón de la Amazonía ecuatoriana, nuestro centro cultural ofrece experiencias auténticas de turismo vivencial.</p>
+                    
+                    <h3>🏞️ Experiencias Disponibles</h3>
+                    <p>• Caminatas por senderos ancestrales</p>
+                    <p>• Ceremonias tradicionales</p>
+                    <p>• Talleres de artesanías</p>
+                    <p>• Degustación gastronómica</p>
+                    <p>• Observación de flora y fauna</p>
+                    
+                    <h3>📍 Cómo Llegar</h3>
+                    <p>Desde Gualaquiza: 20 minutos por carretera asfaltada. Transporte público con horarios disponibles bajo reserva previa.</p>
+                </div>
+                <div class="map-embed">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.0258032633035!2d-78.55361818468033!3d-3.5251994004176756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cc7b52adb97841%3A0x3180b17510ddde0b!2sBio%20Shuar!5e0!3m2!1ses!2sec!4v1720012345678!5m2!1ses!2sec"
+                        width="100%"
+                        height="400"
+                        style="border:0; border-radius:20px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="section social-section" id="redes">
+    <div class="section-content">
+        <h2 class="section-title">Síguenos</h2>
+        <p class="section-subtitle">Conéctate y comparte la cultura Shuar</p>
+        <ul class="social-list">
+        <li>
+            <a href="https://www.tiktok.com/@bio.shuar" target="_blank">
+            <i class="fab fa-tiktok"></i>
+            <span> - @bio.shuar</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/bio_shuar/" target="_blank">
+            <i class="fab fa-instagram"></i>
+            <span> - @bio_shuar</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/p/BioShuar-100088873056213/?locale=es_LA" target="_blank">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+            <span> - BioShuar</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://wa.me/593993881872" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span> - Contacto</span>
+            </a>
+        </li>
+        </ul>
+    </div>
+    </section>
+
+    <!-- Floating Navigation -->
+    <div class="floating-nav">
+        <div class="nav-dot active" data-section="home"></div>
+        <div class="nav-dot" data-section="cultura"></div>
+        <div class="nav-dot" data-section="tiktok"></div>
+        <div class="nav-dot" data-section="ubicacion"></div>
+        <div class="nav-dot" data-section="redes"></div>
     </div>
 
-    <div id="myModal" class="modal" style="display: none;">
-        <span class="close" id="close-modal">&times;</span>
-        <img src="" id="modal-image" class="modal-content">
-    </div>
-
-    <img src="images/biosaurio.png" alt="Biosaurio" class="biosaurio">
-    
+    <!-- JS Script -->
     <script src="scripts.js"></script>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 <strong>BioShuar</strong>. Todos los derechos reservados.</p>
+            <p>Desarrollado con orgullo desde la Amazonía ecuatoriana.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
