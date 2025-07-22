@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --shuar-green: #2af734;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: #0a0a0a;
@@ -253,7 +257,7 @@ body {
     font-size: 1.2rem;
     opacity: 0.8;
     margin-bottom: 60px;
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -319,6 +323,23 @@ body {
     line-height: 1.8;
     margin-bottom: 15px;
     opacity: 0.9;
+}
+.magico-image {
+    max-width: 140px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #4CAF50; /* verde suave, puedes ajustarlo */
+}
+
+.magico-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: #81C784; /* cambia el tono al pasar el mouse */
 }
 
 .map-placeholder {
@@ -488,6 +509,19 @@ body {
     transform: rotate(45deg);
 }
 
+.footer-link {
+    color: #16e361;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #2e7d32; /* tono más oscuro de verde */
+    text-decoration: underline;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .floating-nav {
@@ -535,4 +569,69 @@ body {
     background-position: center;
     background-attachment: fixed;
     z-index: -1;
+}
+
+/* Hojas flotantes */
+.floating-leaves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.leaf {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.leaf-1 {
+    width: 80px;
+    height: 80px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 C70,10 90,30 90,50 C90,70 70,90 50,90 C30,90 10,70 10,50 C10,30 30,10 50,10 Z" fill="%234ade80"/></svg>');
+    top: 20%;
+    left: 10%;
+    animation: floatLeaf1 25s linear infinite;
+}
+
+.leaf-2 {
+    width: 60px;
+    height: 60px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 C30,20 20,40 30,60 C40,80 60,85 80,70 C90,50 70,20 50,10 Z" fill="%2316a34a"/></svg>');
+    top: 60%;
+    left: 80%;
+    animation: floatLeaf2 30s linear infinite;
+}
+
+.leaf-3 {
+    width: 50px;
+    height: 50px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,50 Q25,10 50,10 Q75,10 90,50 Q75,90 50,90 Q25,90 10,50 Z" fill="%2322c55e"/></svg>');
+    top: 40%;
+    left: 70%;
+    animation: floatLeaf3 20s linear infinite;
+}
+
+@keyframes floatLeaf1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(50px, 100px) rotate(180deg); }
+    100% { transform: translate(0, 200px) rotate(360deg); }
+}
+
+@keyframes floatLeaf2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-50px, 150px) rotate(180deg); }
+    100% { transform: translate(0, 300px) rotate(360deg); }
+}
+
+@keyframes floatLeaf3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-30px, 200px) rotate(180deg); }
+    100% { transform: translate(0, 400px) rotate(360deg); }
 }
