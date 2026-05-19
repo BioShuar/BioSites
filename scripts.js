@@ -1,3 +1,68 @@
+// Crear más hojas animadas dinámicamente
+function createFloatingLeaves() {
+    const container = document.querySelector('.floating-leaves');
+    if (!container) return;
+    
+    // Crear 8 hojas adicionales con delays aleatorios entre 1.5 y 4 segundos
+    for (let i = 4; i <= 11; i++) {
+        const leaf = document.createElement('div');
+        leaf.className = 'leaf leaf-extra';
+        leaf.style.left = Math.random() * 100 + '%';
+        leaf.style.width = (70 + Math.random() * 40) + 'px';
+        leaf.style.height = leaf.style.width;
+        leaf.style.animationDelay = (1.5 + Math.random() * 2.5) + 's';
+        leaf.style.animationDuration = (15 + Math.random() * 10) + 's';
+        container.appendChild(leaf);
+    }
+}
+
+// CSS para las hojas extra
+const style = document.createElement('style');
+style.textContent = `
+    .leaf-extra {
+        position: absolute;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path d="M50,0 Q70,20 75,40 Q78,60 70,80 Q60,100 50,110 Q40,100 30,80 Q22,60 25,40 Q30,20 50,0 Z M50,50 Q55,60 50,70 Q45,60 50,50 Z" fill="%234ade80" stroke="%2316a34a" stroke-width="1"/></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        z-index: 1;
+        pointer-events: none;
+        animation: fallLeafExtra 20s linear infinite;
+    }
+    
+    @keyframes fallLeafExtra {
+        0% {
+            top: -120px;
+            opacity: 0;
+            transform: rotateZ(0deg) translateX(0);
+        }
+        5% {
+            opacity: 0.7;
+        }
+        50% {
+            opacity: 0.7;
+            transform: rotateZ(180deg) translateX(80px);
+        }
+        95% {
+            opacity: 0.7;
+        }
+        100% {
+            top: 100vh;
+            opacity: 0;
+            transform: rotateZ(360deg) translateX(100px);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Llamar la función cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createFloatingLeaves);
+} else {
+    createFloatingLeaves();
+}
+
 // Smooth scrolling and navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
